@@ -40,7 +40,14 @@ def menu():
     high = n-1
     k = (high//2)
     ind = QuickSort(arr, low, high, k)
-    print(arr[ind])
+    count = 0
+    for i in arr:
+        if(arr[ind] == i):
+            count += 1
+    if(count > len(arr)//2):
+        print(arr[ind])
+    else:
+        print("No majority Element")
 
 
 def main():
